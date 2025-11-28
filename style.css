@@ -11,6 +11,7 @@
     --accent-color: #e74c3c;
     --bg-color: #ecf0f1;
     --card-bg: #ffffff;
+    --container-bg: gray;
     --text-color: #333333;
     --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -31,7 +32,7 @@ body {
 .container {
     max-width: 900px;
     width: 100%;
-    background: var(--card-bg);
+    background: var(--container-bg);
     border-radius: 15px;
     box-shadow: var(--shadow);
     overflow: hidden;
@@ -43,6 +44,21 @@ header {
     color: white;
     padding: 40px 30px;
     text-align: center;
+
+    background-size: 200% 200%;
+    animation: gradientMove 5s ease infinite;
+}
+
+    @keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .main-title {
